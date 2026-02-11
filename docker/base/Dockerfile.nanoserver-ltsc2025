@@ -12,7 +12,8 @@ WORKDIR /app
 COPY libreoffice/ C:/apps/libreoffice/
 
 # Set environment variables and add to PATH
-ENV LIBREOFFICE_PATH="C:\apps\libreoffice\libreoffice\program\soffice.exe" `
+ENV LIBREOFFICE_DIR="C:\apps\libreoffice\libreoffice" `
+    LIBREOFFICE_PATH="C:\apps\libreoffice\libreoffice\program\soffice.exe" `
     PATH="${PATH};C:\apps\libreoffice\libreoffice\program"
 
 # Default command

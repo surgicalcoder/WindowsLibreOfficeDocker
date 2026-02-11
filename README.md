@@ -62,6 +62,7 @@ ENTRYPOINT ["dotnet", "MyApp.dll"]
 
 The following environment variables are set in all images:
 
+- `LIBREOFFICE_DIR` - LibreOffice installation directory: `C:\apps\libreoffice\libreoffice`
 - `LIBREOFFICE_PATH` - Full path to soffice.exe: `C:\apps\libreoffice\libreoffice\program\soffice.exe`
 - `PATH` - Includes LibreOffice program directory for direct command access
 
@@ -151,22 +152,6 @@ WindowsLibreOfficeDocker/
 ├── .dockerignore                     # Build context optimization
 └── README.md
 ```
-
-## System Requirements
-
-### For Running Containers
-
-- Windows Server 2022 or Windows 11 (for ltsc2022 images)
-- Windows Server 2025 or compatible (for ltsc2025 images)
-- Docker Desktop or Docker Engine with Windows container support
-- Minimum 4 GB RAM recommended
-- Sufficient disk space for image (~2-4 GB per variant)
-
-### For Building Images
-
-- Windows with Docker Desktop
-- GitHub Actions runner: `windows-2025`
-- Source LibreOffice files in `source/` directory
 
 ## Performance Notes
 
