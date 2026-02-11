@@ -1,0 +1,19 @@
+# escape=`
+
+ARG DOTNET_VERSION=10.0.3
+
+# Use .NET runtime base image
+FROM mcr.microsoft.com/dotnet/runtime:${DOTNET_VERSION}-nanoserver-ltsc2025
+
+# Set working directory
+WORKDIR /app
+
+# Copy LibreOffice files from build context
+COPY libreoffice/ C:/apps/libreoffice/
+
+# Set environment variables and add to PATH
+ENV LIBREOFFICE_PATH="C:\apps\libreoffice\libreoffice\program\soffice.exe" `
+    PATH="${PATH};C:\apps\libreoffice\libreoffice\program"
+
+# Default command
+CMD ["cmd.exe"]

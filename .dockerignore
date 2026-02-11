@@ -1,0 +1,29 @@
+# Git
+.git
+.gitignore
+.github
+
+# Documentation
+*.md
+LICENSE
+
+# IDE and editor files
+.vscode
+.vs
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build artifacts
+*.log
+*.tmp
+*~
+
+# Docker files (not needed in context)
+docker/
+Dockerfile*
+
+# Keep only build-context in the build
+*
+!build-context/**
