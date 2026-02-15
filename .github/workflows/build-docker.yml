@@ -35,6 +35,7 @@ jobs:
           if (Test-Path "build-context\libreoffice") {
             Remove-Item "build-context\libreoffice" -Recurse -Force
           }
+          New-Item -ItemType Directory -Path "build-context\libreoffice" -Force
           Copy-Item "source\*" "build-context\libreoffice" -Recurse -Force
           Write-Host "LibreOffice files copied to build-context for Docker"
 
